@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Subject.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">midterm-CarlosReategui</a> &gt; <a href="index.source.html" class="el_package">midterm</a> &gt; <span class="el_source">Subject.java</span></div><h1>Subject.java</h1><pre class="source lang-java linenums">package midterm;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Subject {
+<span class="fc" id="L9">    private final List&lt;Observer&gt; observers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L10">    HashMap&lt;Character, Integer&gt; data = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L12">    public Subject() {</span>
+<span class="fc" id="L13">        data.put('A', 40);</span>
+<span class="fc" id="L14">        data.put('B', 25);</span>
+<span class="fc" id="L15">        data.put('C', 15);</span>
+<span class="fc" id="L16">        data.put('D', 20);</span>
+<span class="fc" id="L17">    }</span>
+
+    public void setData(Character character, Integer value) {
+<span class="fc" id="L20">        data.put(character, value);</span>
+<span class="fc" id="L21">        this.notifyObservers();</span>
+<span class="fc" id="L22">    }</span>
+
+    private void notifyObservers() {
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (Observer observer : this.observers) {</span>
+<span class="fc" id="L26">            observer.update();</span>
+<span class="fc" id="L27">        }</span>
+<span class="fc" id="L28">    }</span>
+
+    public void addObserver(Observer observer) {
+<span class="fc" id="L31">        observers.add(observer);</span>
+<span class="fc" id="L32">    }</span>
+
+    public HashMap&lt;Character, Integer&gt; getData() {
+<span class="fc" id="L35">        return data;</span>
+    }
+
+    public String getDataAsString() {
+<span class="fc" id="L39">        StringBuilder formattedData = new StringBuilder();</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        for (Map.Entry&lt;Character, Integer&gt; entry : data.entrySet()) {</span>
+<span class="fc" id="L41">            Character character = entry.getKey();</span>
+<span class="fc" id="L42">            Integer value = entry.getValue();</span>
+<span class="fc" id="L43">            formattedData.append(character).append(&quot;: &quot;).append(value).append(&quot;. &quot;);</span>
+<span class="fc" id="L44">        }</span>
+<span class="fc" id="L45">        return formattedData.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
