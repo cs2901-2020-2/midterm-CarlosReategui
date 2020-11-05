@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DrawBarChart.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">midterm-CarlosReategui</a> &gt; <a href="index.source.html" class="el_package">midterm</a> &gt; <span class="el_source">DrawBarChart.java</span></div><h1>DrawBarChart.java</h1><pre class="source lang-java linenums">package midterm;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Map;
+
+public class DrawBarChart extends JFrame {
+
+    BarChart barChart;
+
+<span class="nc" id="L18">    public DrawBarChart(BarChart barChart) {</span>
+<span class="nc" id="L19">        this.barChart = barChart;</span>
+<span class="nc" id="L20">        initUI();</span>
+<span class="nc" id="L21">    }</span>
+
+    private void initUI() {
+
+<span class="nc" id="L25">        CategoryDataset dataset = createDataset();</span>
+
+<span class="nc" id="L27">        JFreeChart chart = createChart(dataset);</span>
+<span class="nc" id="L28">        ChartPanel chartPanel = new ChartPanel(chart);</span>
+<span class="nc" id="L29">        chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));</span>
+<span class="nc" id="L30">        chartPanel.setBackground(Color.white);</span>
+<span class="nc" id="L31">        add(chartPanel);</span>
+
+<span class="nc" id="L33">        pack();</span>
+<span class="nc" id="L34">        setTitle(&quot;Bar chart&quot;);</span>
+<span class="nc" id="L35">        setLocationRelativeTo(null);</span>
+<span class="nc" id="L36">        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L37">    }</span>
+
+    private CategoryDataset createDataset() {
+
+<span class="nc" id="L41">        DefaultCategoryDataset dataset = new DefaultCategoryDataset();</span>
+
+<span class="nc" id="L43">        Map&lt;Character, Integer&gt; data = barChart.subject.getData();</span>
+
+<span class="nc" id="L45">        dataset.setValue(data.get('A'), &quot;Values&quot;, &quot;A&quot;);</span>
+<span class="nc" id="L46">        dataset.setValue(data.get('B'), &quot;Values&quot;, &quot;B&quot;);</span>
+<span class="nc" id="L47">        dataset.setValue(data.get('C'), &quot;Values&quot;, &quot;C&quot;);</span>
+<span class="nc" id="L48">        dataset.setValue(data.get('D'), &quot;Values&quot;, &quot;D&quot;);</span>
+
+<span class="nc" id="L50">        return dataset;</span>
+    }
+
+    private JFreeChart createChart(CategoryDataset dataset) {
+
+<span class="nc" id="L55">        JFreeChart barChart = ChartFactory.createBarChart(</span>
+                &quot;Bar chart&quot;,
+                &quot;&quot;,
+                &quot;Values&quot;,
+                dataset,
+                PlotOrientation.VERTICAL,
+                false, true, false);
+
+<span class="nc" id="L63">        return barChart;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

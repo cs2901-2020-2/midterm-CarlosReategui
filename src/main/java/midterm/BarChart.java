@@ -10,4 +10,5 @@ public class BarChart extends Observer {
     public void update() {
         logger.info("Bar chart has been notified: " + this.subject.getDataAsString());
     }
+
 }
