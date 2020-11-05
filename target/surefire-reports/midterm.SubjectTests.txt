@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: midterm.SubjectTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.589 s - in midterm.SubjectTests
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.149 s - in midterm.SubjectTests

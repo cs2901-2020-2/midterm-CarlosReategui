@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 midterm-CarlosReategui,midterm,Observer,0,8,0,0,0,2,0,2,0,2
 midterm-CarlosReategui,midterm,BarChart,0,23,0,0,0,6,0,2,0,2
-midterm-CarlosReategui,midterm,DrawBarChart,105,0,0,0,24,0,4,0,4,0
+midterm-CarlosReategui,midterm,DrawBarChart,0,105,0,0,0,24,0,4,0,4
 midterm-CarlosReategui,midterm,PieChart,0,23,0,0,0,6,0,2,0,2
 midterm-CarlosReategui,midterm,Subject,0,116,0,4,0,25,0,8,0,6
