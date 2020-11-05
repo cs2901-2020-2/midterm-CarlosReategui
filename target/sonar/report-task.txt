@@ -1,0 +1,7 @@
+organization=cs2901-2020-2
+projectKey=cs2901-2020-2_midterm-CarlosReategui
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.14008
+dashboardUrl=https://sonarcloud.io/dashboard?id=cs2901-2020-2_midterm-CarlosReategui
+ceTaskId=AXWY27Nlr26ZhHzPCJ3s
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXWY27Nlr26ZhHzPCJ3s

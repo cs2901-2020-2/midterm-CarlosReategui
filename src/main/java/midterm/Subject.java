@@ -31,7 +31,7 @@ public class Subject {
         observers.add(observer);
     }
 
-    public HashMap<Character, Integer> getData() {
+    public Map<Character, Integer> getData() {
         return data;
     }
 

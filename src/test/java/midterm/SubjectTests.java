@@ -4,14 +4,14 @@ package midterm;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class SubjectTests {
 
     @Test
     public void testCase0() {
         Subject subject = new Subject();
-        HashMap<Character, Integer> data = subject.getData();
+        Map<Character, Integer> data = subject.getData();
         Integer expected = 40;
         Integer found = data.get('A');
         Assert.assertEquals(expected, found);
@@ -34,7 +34,7 @@ public class SubjectTests {
 
         subject.setData('B', 5);
 
-        HashMap<Character, Integer> data = subject.getData();
+        Map<Character, Integer> data = subject.getData();
         Integer found = data.get('B');
         Integer expected = 5;
 
