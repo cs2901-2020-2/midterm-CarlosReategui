@@ -2,4 +2,5 @@ midterm/PieChart.class
 midterm/Observer.class
 midterm/BarChart.class
 midterm/DrawBarChart.class
+midterm/DrawPieChart.class
 midterm/Subject.class
