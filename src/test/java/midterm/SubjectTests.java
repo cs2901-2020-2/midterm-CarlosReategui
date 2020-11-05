@@ -41,10 +41,4 @@ public class SubjectTests {
         Assert.assertEquals(found, expected);
     }
 
-    @Test
-    public void testCase2() {
-        Subject subject = new Subject();
-        BarChart barChart = new BarChart(subject);
-        DrawBarChart barChartDraw = new DrawBarChart(barChart);
-    }
 }
