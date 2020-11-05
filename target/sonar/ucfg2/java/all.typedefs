@@ -116,7 +116,9 @@ ulogp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Th
 @entering(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Zjava.util.logging.Logger#entering(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)VN
 info(Ljava/lang/String;)2java.util.logging.Logger#info(Ljava/lang/String;)Vx
 -exiting(Ljava/lang/String;Ljava/lang/String;)Gjava.util.logging.Logger#exiting(Ljava/lang/String;Ljava/lang/String;)V¨
-Elog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)_java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V–
+Elog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)_java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)Vx
+midterm.DrawPieChartjava.lang.ObjectN
+<init>(Lmidterm/PieChart;)0midterm.DrawPieChart#<init>(Lmidterm/PieChart;)V–
 midterm.PieChartmidterm.ObserverH
 <init>(Lmidterm/Subject;)+midterm.PieChart#<init>(Lmidterm/Subject;)V&
 update()midterm.PieChart#update()V/
